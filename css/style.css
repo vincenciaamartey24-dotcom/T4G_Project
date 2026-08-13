@@ -1,0 +1,1762 @@
+/* =====================================================
+THE LADIES SHOP
+MAIN STYLE SHEET
+===================================================== */
+
+/* =====================================================
+GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #FEDCEE;
+    color: #555;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================================
+ABOUT PAGE BACKGROUND
+ONLY ABOUT PAGE IS WHITE
+===================================================== */
+
+body.about-body {
+    background: #ffffff;
+}
+
+
+/* =====================================================
+CONTACT PAGE BACKGROUND
+ONLY CONTACT PAGE IS WHITE
+===================================================== */
+
+body.contact-body {
+    background: #ffffff;
+}
+
+
+/* =====================================================
+NAVIGATION
+SAME NAVIGATION FOR ALL PAGES
+===================================================== */
+
+.navbar {
+    width: 100%;
+    min-height: 120px;
+
+    background: lch(98.49% 1.05 18.85);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 16%;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: block;
+}
+
+.logo img {
+    width: 85px;
+    height: 85px;
+
+    object-fit: contain;
+    display: block;
+}
+
+
+/* NAVIGATION LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: #555;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c78383;
+}
+
+
+/* ACTIVE PAGE */
+
+.nav-links a.active {
+    color: #D48B8B;
+}
+
+
+/* =====================================================
+HOME PAGE
+===================================================== */
+
+/* HERO / BANNER */
+
+.hero {
+    width: 100%;
+    max-width: 1550px;
+
+    margin: 20px auto 0;
+
+    overflow: hidden;
+}
+
+.hero img {
+    width: 300%;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* NEW ARRIVALS */
+
+.new-arrivals {
+    width: 80%;
+    max-width: 1000px;
+
+    margin: 20px auto 60px;
+}
+
+.new-arrivals h2 {
+    font-size: 12px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+
+    color: #555;
+
+    margin-bottom: 35px;
+}
+
+
+/* HOME PRODUCT GRID */
+
+.products {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 80px;
+
+    row-gap: 40px;
+}
+
+
+/* HOME PRODUCT CARD */
+
+.product-card {
+    text-align: center;
+
+    font-size: 10px;
+
+    color: #777;
+}
+
+
+/* HOME PRODUCT IMAGE */
+
+.product-card img {
+    width: 200px;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin: 0 auto 10px;
+
+    transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+    transform: scale(1.05);
+}
+
+
+/* HOME PRODUCT NAME */
+
+.product-card h3 {
+    font-size: 10px;
+
+    font-weight: 500;
+
+    color: #555;
+
+    margin-bottom: 4px;
+}
+
+
+/* HOME PRODUCT INFORMATION */
+
+.product-card p {
+    font-size: 9px;
+
+    margin: 2px 0;
+
+    color: #777;
+}
+
+
+/* =====================================================
+SHOP PAGE
+===================================================== */
+
+.shop-page {
+    width: 100%;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 50px 30px 70px;
+
+    text-align: center;
+}
+
+
+/* SHOP TITLE */
+
+.shop-page h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 32px;
+
+    color: #1A1A1A;
+
+    margin-bottom: 10px;
+}
+
+
+/* SHOP INTRODUCTION */
+
+.shop-intro {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    color: #555;
+
+    margin-bottom: 40px;
+}
+
+
+/* SHOP PRODUCT GRID */
+
+.shop-products {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 80px;
+
+    row-gap: 40px;
+}
+
+
+/* SHOP PRODUCT */
+
+.shop-product {
+    text-align: center;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* SHOP PRODUCT IMAGE */
+
+.shop-product img {
+    width: 200px;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin: 0 auto 10px;
+
+    transition: transform 0.3s ease;
+}
+
+.shop-product img:hover {
+    transform: scale(1.05);
+}
+
+
+/* SHOP PRODUCT NAME */
+
+.shop-product h3 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 17px;
+
+    color: #1A1A1A;
+
+    margin: 10px 0 7px;
+}
+
+
+/* SHOP PRICE */
+
+.shop-product .price {
+    color: #D48B8B;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin: 5px 0;
+}
+
+
+/* CALL TO ORDER */
+
+.shop-product span {
+    display: block;
+
+    color: #555;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+}
+
+
+/* PHONE */
+
+.shop-product small {
+    display: block;
+
+    color: #777;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+}
+
+
+/* EXTRA PRODUCTS */
+
+.extra-product {
+    display: none;
+}
+
+
+/* =====================================================
+VIEW MORE BUTTON
+===================================================== */
+
+#viewMoreBtn {
+    display: block;
+
+    margin: 55px auto 150px;
+
+    padding: 13px 38px;
+
+    background: #E78BB3;
+
+    color: white;
+
+    border: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#viewMoreBtn:hover {
+    background: #C47A7A;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+PRODUCT DETAILS PAGE
+===================================================== */
+
+.product-details {
+    max-width: 1100px;
+
+    margin: 60px auto;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+
+/* PRODUCT IMAGE */
+
+.product-details-image {
+    width: 50%;
+
+    text-align: center;
+}
+
+.product-details-image img {
+    width: 100%;
+
+    max-width: 500px;
+
+    height: 500px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+}
+
+
+/* PRODUCT INFORMATION */
+
+.product-details-info {
+    width: 50%;
+}
+
+.product-details-info h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.product-details-price {
+    font-size: 25px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.product-details-info p {
+    line-height: 1.8;
+}
+
+
+/* ORDER BUTTON */
+
+.order-button {
+    background: #D48B8B;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 30px;
+
+    border-radius: 7px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    margin: 10px 0;
+}
+
+.order-button:hover {
+    background: #C47A7A;
+}
+
+
+/* CLICKABLE PRODUCTS */
+
+.product-link {
+    display: block;
+
+    cursor: pointer;
+}
+
+.product-link img {
+    cursor: pointer;
+}
+
+
+/* =====================================================
+CUSTOMER REVIEWS
+===================================================== */
+
+.customer-reviews {
+    max-width: 1000px;
+
+    margin: 50px auto;
+
+    padding: 30px;
+}
+
+.customer-reviews h2 {
+    text-align: center;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 32px;
+
+    margin-bottom: 30px;
+}
+
+.review {
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+}
+
+.stars {
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+.review p {
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+ABOUT PAGE
+===================================================== */
+
+.about-page {
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 50px 0 80px;
+}
+
+
+/* ABOUT BANNER */
+
+.about-banner {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 60px;
+
+    overflow: hidden;
+}
+
+.about-banner img {
+    width: 1500px;
+
+    height: 850px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ABOUT INTRO */
+
+.about-intro {
+    width: 80%;
+
+    max-width: 850px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+.about-logo {
+    width: 100px;
+
+    height: 100px;
+
+    object-fit: contain;
+
+    margin: 0 auto 25px;
+}
+
+.about-intro p {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #555;
+
+    background: transparent;
+
+    margin: 0 auto 18px;
+}
+
+
+/* =====================================================
+FOUNDER
+===================================================== */
+
+.founder {
+    width: 80%;
+
+    max-width: 1000px;
+
+    margin: 0 auto 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 70px;
+}
+
+
+/* FOUNDER TEXT */
+
+.founder-text {
+    width: 50%;
+
+    text-align: left;
+}
+
+.founder-text p {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 24px;
+
+    line-height: 1.6;
+
+    color: #1A1A1A;
+
+    background: transparent;
+
+    margin: 0 0 20px;
+}
+
+.founder-text h3 {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #D48B8B;
+
+    background: transparent;
+
+    margin: 0;
+}
+
+
+/* FOUNDER IMAGE */
+
+.founder-image {
+    width: 50%;
+
+    display: flex;
+
+    justify-content: flex-end;
+}
+
+.founder-image img {
+    width: 100%;
+
+    max-width: 420px;
+
+    height: 430px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =====================================================
+MISSION
+ONLY THE MISSION PARAGRAPH IS ASH
+===================================================== */
+
+.mission {
+    width: 80%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    background: transparent;
+}
+
+.about-body .mission p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #555;
+    background: #d9d9d9;
+    padding: 30px;
+    margin: 0;
+}
+
+
+/* =====================================================
+CONTACT PAGE
+===================================================== */
+
+.contact-page {
+    padding: 35px 6% 70px;
+}
+
+.contact-intro {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.contact-intro h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+
+    margin-bottom: 28px;
+}
+
+.contact-intro p {
+    font-size: 15px;
+
+    font-style: italic;
+
+    color: #6B7280;
+}
+
+
+/* CONTACT INFORMATION */
+
+.contact-info {
+    max-width: 1000px;
+
+    margin: 0 auto 50px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.info-box {
+    background: #F1EFED;
+
+    min-height: 100px;
+
+    padding: 20px 15px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+}
+
+.info-icon {
+    font-size: 22px;
+
+    color: #6B7280;
+}
+
+.info-box h3 {
+    font-size: 14px;
+
+    font-weight: 500;
+
+    margin-bottom: 6px;
+}
+
+.info-box p {
+    font-size: 11px;
+
+    color: #6B7280;
+
+    line-height: 1.6;
+}
+
+
+/* CONTACT FORM */
+
+.contact-form-section {
+    width: 55%;
+
+    margin: 0 auto;
+
+    background: #F1EFED;
+
+    padding: 55px 65px;
+}
+
+.contact-form-section h2 {
+    text-align: center;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    margin-bottom: 30px;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 55px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 12px;
+
+    margin-bottom: 9px;
+
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    border: none;
+
+    background: #FFFFFF;
+
+    padding: 11px;
+
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group input {
+    height: 30px;
+}
+
+.form-group textarea {
+    height: 80px;
+
+    resize: none;
+}
+
+.form-group.full {
+    width: 100%;
+}
+
+
+/* CONTACT BUTTON */
+
+.contact-form-section button {
+    display: block;
+
+    width: 70%;
+
+    margin: 20px auto 0;
+
+    border: none;
+
+    background: #E78BB3;
+
+    color: #FFFFFF;
+
+    padding: 14px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.contact-form-section button:hover {
+    background: #D48B8B;
+}
+
+/* =====================================================
+CONTACT PAGE
+WHITE BACKGROUND + PINK NAVIGATION
+===================================================== */
+
+body.contact-body {
+    background: #ffffff;
+}
+
+body.contact-body .navbar {
+    background: #fEDCEE;
+}
+
+
+
+
+/* =====================================================
+FOOTER
+BLACK ON ALL PAGES EXCEPT SHOP PAGE SHOULD BE BLACK
+===================================================== */
+
+footer {
+    width: 100%;
+
+    background:#737070;
+
+    color: #281B1D;
+
+    padding: 35px 12% 25px;
+
+    margin-top: 0;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 50px;
+}
+
+
+/* FOOTER LEFT */
+
+.footer-left {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.footer-logo {
+    width: 90px;
+
+    height: 90px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+}
+
+
+/* SOCIALS */
+
+.socials {
+    display: flex;
+
+    gap: 20px;
+
+    margin-bottom: 15px;
+}
+
+.socials a {
+    color: white;
+
+    font-size: 12px;
+
+    transition: color 0.3s ease;
+}
+
+.socials a:hover {
+    color: #D48B8B;
+}
+
+
+/* COPYRIGHT */
+
+.footer-left > p {
+    color: #ccc;
+
+    font-size: 10px;
+
+    background: transparent;
+
+    margin: 0;
+}
+
+
+/* FOOTER COLUMNS */
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.footer-column h3 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 15px;
+
+    color: white;
+
+    margin: 0 0 8px;
+}
+
+.footer-column p {
+    color: #ddd;
+
+    font-size: 10px;
+
+    background: transparent;
+
+    margin: 0;
+}
+
+.footer-column a {
+    color: #ddd;
+
+    font-size: 10px;
+
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #D48B8B;
+}
+
+
+/* =====================================================
+TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 10px 8%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        width: 90%;
+    }
+
+    .new-arrivals {
+        width: 90%;
+    }
+
+    .products {
+        column-gap: 30px;
+    }
+
+    .shop-products {
+        column-gap: 30px;
+    }
+
+}
+
+
+/* =====================================================
+MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .hero {
+        width: 94%;
+
+        margin-top: 15px;
+    }
+
+    .new-arrivals {
+        width: 90%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+
+        column-gap: 20px;
+
+        row-gap: 35px;
+    }
+
+    .product-card img {
+        width: 110px;
+
+        height: 110px;
+    }
+
+
+    /* SHOP MOBILE */
+
+    .shop-page {
+        padding: 35px 20px 50px;
+    }
+
+    .shop-products {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 35px 20px;
+    }
+
+
+    /* FOOTER MOBILE */
+
+    footer {
+        padding: 35px 8% 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+
+    /* ABOUT MOBILE */
+
+    .about-page {
+        padding-top: 30px;
+    }
+
+    .about-banner {
+        width: 94%;
+
+        margin-bottom: 40px;
+    }
+
+    .about-banner img {
+        height: auto;
+    }
+
+    .about-intro {
+        width: 90%;
+
+        margin-bottom: 50px;
+    }
+
+    .founder {
+        width: 90%;
+
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+    .founder-text,
+    .founder-image {
+        width: 100%;
+    }
+
+    .founder-text {
+        text-align: center;
+    }
+
+    .founder-text p {
+        font-size: 21px;
+    }
+
+    .founder-image {
+        justify-content: center;
+    }
+
+    .founder-image img {
+        height: auto;
+    }
+
+    .mission {
+        width: 90%;
+    }
+
+
+    /* CONTACT MOBILE */
+
+    .contact-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-form-section {
+        width: 90%;
+
+        padding: 35px 25px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+}
+
+
+/* =====================================================
+SMALL PHONES
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img {
+        width: 150px;
+
+        height: 150px;
+    }
+
+    .shop-products {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-product img {
+        height: 250px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+.login-page {
+    background-color: #fcecef;
+    min-height: 650px;
+    padding: 55px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+/* LOGIN BOX */
+
+.login-box {
+    width: 100%;
+    max-width: 460px;
+    background-color: #eef3ef;
+    padding: 35px 38px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+
+/* LOGIN LOGO */
+
+.login-logo {
+    display: block;
+    width: 65px;
+    height: auto;
+    margin: 0 auto 15px;
+}
+
+
+/* LOGIN TITLE */
+
+.login-box h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: #555555;
+    text-align: center;
+    margin: 0 0 8px;
+}
+
+
+/* SUBTITLE */
+
+.login-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #777777;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+
+/* FORM */
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+
+/* INPUTS */
+
+.form-group input {
+    width: 100%;
+    height: 42px;
+    padding: 10px 12px;
+    border: none;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.form-group input:focus {
+    outline: 1px solid #d48b8b;
+}
+
+
+/* REMEMBER / FORGOT PASSWORD */
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #777777;
+}
+
+.remember input {
+    accent-color: #d48b8b;
+}
+
+.login-options a {
+    color: #777777;
+    text-decoration: none;
+}
+
+.login-options a:hover {
+    color: #d48b8b;
+}
+
+
+/* SIGN IN BUTTON */
+
+.login-box button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    background-color: #ea33a7;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #c47a7a;
+}
+
+
+/* SIGN UP TEXT */
+
+.signup-text {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #777777;
+    margin-top: 18px;
+}
+
+.signup-text a {
+    color: #d48b8b;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .login-page {
+        padding: 40px 15px;
+    }
+
+    .login-box {
+        padding: 30px 25px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* =========================================
+   SIGN UP PAGE
+========================================= */
+
+.signup-page {
+    background-color: #fcecef;
+    min-height: 650px;
+
+    padding: 55px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+
+/* SIGN UP BOX */
+
+.signup-box {
+    width: 100%;
+    max-width: 460px;
+
+    background-color: #eef3ef;
+
+    padding: 35px 38px;
+
+    box-sizing: border-box;
+}
+
+
+/* LOGO */
+
+.signup-logo {
+    display: block;
+
+    width: 65px;
+    height: auto;
+
+    margin: 0 auto 18px;
+}
+
+
+/* TITLE */
+
+.signup-box h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    color: #555555;
+
+    text-align: center;
+
+    margin: 0 0 30px;
+}
+
+
+/* FORM GROUP */
+
+.signup-form-group {
+    margin-bottom: 22px;
+}
+
+
+/* LABEL */
+
+.signup-form-group label {
+    display: block;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+
+    color: #666666;
+
+    margin-bottom: 7px;
+}
+
+
+/* INPUT */
+
+.signup-form-group input {
+    width: 100%;
+    height: 42px;
+
+    padding: 10px 12px;
+
+    border: none;
+
+    background-color: #ffffff;
+
+    box-sizing: border-box;
+
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+}
+
+
+/* INPUT WHEN CLICKED */
+
+.signup-form-group input:focus {
+    outline: 1px solid #d48b8b;
+}
+
+
+/* CREATE ACCOUNT BUTTON */
+
+.signup-box button {
+    width: 100%;
+    height: 45px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    background-color: #ea33a7;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+
+/* BUTTON HOVER */
+
+.signup-box button:hover {
+    background-color: #c47a7a;
+}
+
+
+/* LOGIN LINK */
+
+.login-link {
+    text-align: center;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    color: #777777;
+
+    margin-top: 18px;
+}
+
+
+.login-link a {
+    color: #ea33a7;
+
+    text-decoration: none;
+
+    font-weight: 500;
+}
+
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+header {
+    background-color: #ffffff;
+
+    width: 100%;
+
+    padding: 15px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+
+.logo img {
+    width: 90px;
+
+    height: auto;
+
+    display: block;
+}
+
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+nav a {
+    color: #555555;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 500;
+}
+
+
+nav a:hover {
+    color: #d48b8b;
+}
+
+
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+
+    .signup-page {
+        padding: 40px 15px;
+    }
+
+
+    .signup-box {
+        padding: 30px 25px;
+    }
+
+
+    .footer-container {
+        flex-direction: column;
+
+        gap: 30px;
+    }
+}

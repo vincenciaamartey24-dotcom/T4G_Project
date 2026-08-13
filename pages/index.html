@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>THE LADIES SHOP</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+ 
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="../image/image.png" alt="THE LADIES SHOP">
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="index.html">HOME</a>
+            <a href="shop.html">SHOP</a>
+            <a href="sale.html">SALE</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="login.html">LOG IN</a>
+            <a href="signup.html">SIGN UP</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO/BANNER ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <img src="../image/image3.png"
+                 alt="Step Out In Style">
+
+        </section>
+
+
+        <!-- ================= NEW ARRIVALS ================= -->
+
+        <section class="new-arrivals">
+
+            <h2>OUR NEW ARRIVALS</h2>
+
+            <div class="products">
+
+
+                <!-- PRODUCT 1 -->
+
+                <div class="product-card">
+
+                    <img src="../image/yasmine mule.jpg"
+                         alt="Yasmine mule">
+
+                    <h3>Yasmine Mule</h3>
+
+                    <p>GHC 270.00</p>
+
+                    <p>Call to Order</p>
+
+                    <p>Phone: 0506487234</p>
+
+                </div>
+
+
+                <!-- PRODUCT 2 -->
+
+                <div class="product-card">
+
+                    <img src="../image/Stiletto heel.jpg"
+                         alt="Stiletto heel">
+
+                    <h3>Stiletto heels</h3>
+
+                    <p>GHC 380.00</p>
+
+                    <p>Call to Order</p>
+
+                    <p>Phone: 0506487234</p>
+
+                </div>
+
+
+                <!-- PRODUCT 3 -->
+
+                <div class="product-card">
+
+                    <img src="../image/Sliver heels.jpg"
+                         alt="Silver heels">
+
+                    <h3>Silver heels</h3>
+
+                    <p>GHC 252.00</p>
+
+                    <p>Call to Order</p>
+
+                    <p>Phone: 0506487234</p>
+
+                </div>
+
+
+                <!-- PRODUCT 4 -->
+
+                <div class="product-card">
+
+                    <img src="../image/luna heels.jpg"
+                         alt="Luna Heels">
+
+                    <h3>Luna Heels</h3>
+
+                    <p>GHC 270.00</p>
+
+                    <p>Call to Order</p>
+
+                    <p>Phone: 0506487234</p>
+
+                </div>
+
+
+                <!-- PRODUCT 5 -->
+
+                <div class="product-card">
+
+                    <img src="../image/tina heel.jpg"
+                         alt="tina Heel">
+
+                    <h3>Tina heels</h3>
+
+                    <p>GHC 250.00</p>
+
+                    <p>Call to Order</p>
+
+                    <p>Phone: 0506487234</p>
+
+                </div>
+
+
+                <!-- PRODUCT 6 -->
+
+                <div class="product-card">
+
+                    <img src="../image/ulla heel.jpg"
+                         alt="Ulla Sandals">
+
+                    <h3>Ulla heels</h3>
+
+                    <p>GHC 290.00</p>
+
+                    <p>Call to Order</p>
+
+                    <p>Phone: 0506487234</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+  <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
+            <img
+                src="../image/image.png"
+                alt="THE LADIES SHOP"
+                class="footer-logo"
+            >
+
+
+            <div class="social-icons">
+
+            <a href="#" aria-label="TikTok">♪</a> 
+
+            <a href="#" aria-label="Instagram">◎</a>
+
+            </div>
+
+
+            <p> © 2026 THE LADIES SHOP</p>    
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                STORE HOURS
+            </h3>
+
+            <p>
+                Sunday:Closed
+            </p>
+
+            <p>
+                Mon-Sat
+            </p>
+
+            <p>
+                9:00am - 7:00pm
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                MENU
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="sale.html">
+                Sale
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
+
+
+
+
+
+    <!-- ================= VIEW MORE SCRIPT ================= -->
+
+    <script>
+
+        const viewMoreBtn = document.getElementById("viewMoreBtn");
+
+        const extraProducts =
+            document.querySelectorAll(".extra-product");
+
+        viewMoreBtn.addEventListener("click", function () {
+
+            extraProducts.forEach(function (product) {
+
+                product.style.display = "block";
+
+            });
+
+            viewMoreBtn.style.display = "none";
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,597 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>THE LADIES SHOP - Product Details</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="../image/image.png" alt="THE LADIES SHOP">
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="index.html">HOME</a>
+            <a href="shop.html">SHOP</a>
+            <a href="sale.html">SALE</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PRODUCT DETAILS ================= -->
+
+    <main>
+
+        <section class="product-details">
+
+            <!-- PRODUCT IMAGE -->
+
+            <div class="product-details-image">
+
+                <img id="productImage"
+                    src="../image/Shiny Clutch.jpg"
+                    alt="Product">
+
+            </div>
+
+
+            <!-- PRODUCT INFORMATION -->
+
+            <div class="product-details-info">
+
+                <h1 id="productName">
+                    Product Name
+                </h1>
+
+                <p class="product-details-price"
+                    id="productPrice">
+                    GH₵ 300.00
+                </p>
+
+                <p id="productDescription">
+                    Beautiful and stylish product from
+                    THE LADIES SHOP.
+                </p>
+
+                <p>
+                    <strong>Availability:</strong>
+                    In Stock
+                </p>
+
+                <button class="order-button">
+                    Call to Order
+                </button>
+
+                <p>
+                    <strong>Phone:</strong>
+                    0560467334
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CUSTOMER REVIEWS ================= -->
+
+        <section class="customer-reviews">
+
+            <h2>Customer Reviews</h2>
+
+            <div id="reviewsContainer"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 THE LADIES SHOP. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= PRODUCT SCRIPT ================= -->
+
+    <script>
+
+        /* ================= PRODUCT INFORMATION ================= */
+
+        const params =
+            new URLSearchParams(window.location.search);
+
+        const image =
+            params.get("image");
+
+        const name =
+            params.get("name");
+
+        const price =
+            params.get("price");
+
+        const description =
+            params.get("description");
+
+        const product =
+            params.get("product");
+
+
+        document.getElementById("productImage").src =
+            image;
+
+        document.getElementById("productImage").alt =
+            name;
+
+        document.getElementById("productName").textContent =
+            name;
+
+        document.getElementById("productPrice").textContent =
+            "GH₵ " + price;
+
+        document.getElementById("productDescription").textContent =
+            description;
+
+
+        /* ================= CUSTOMER REVIEWS ================= */
+
+        const reviews = {
+
+
+            /* PRODUCT 1 - SHINY CLUTCH */
+
+            "shiny-clutch": [
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "I really love this clutch. It is beautiful and looks exactly like the picture.",
+                    name: "Naa"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "The quality is amazing and the clutch is perfect for special occasions.",
+                    name: "Abena"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐",
+                    text: "Very beautiful clutch. I love the design and colour.",
+                    name: "Akosua"
+                }
+
+            ],
+
+
+            /* PRODUCT 2 - VERSSE 8 */
+
+            "versse-8": [
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "This bag is very stylish and spacious. I absolutely love it!",
+                    name: "Ama"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "The bag looks exactly like the picture. I am very happy with my purchase.",
+                    name: "Adwoa"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐",
+                    text: "Beautiful bag and good quality. I would definitely recommend it.",
+                    name: "Esi"
+                }
+
+            ],
+
+
+            /* PRODUCT 3 - BANEVANF */
+
+            "banevanf": [
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "The bag is gorgeous and very comfortable to carry.",
+                    name: "Martha"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "I love the design. It is perfect for everyday use.",
+                    name: "Linda"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐",
+                    text: "Very nice bag and the quality is good.",
+                    name: "Joana"
+                }
+
+            ],
+
+
+            /* PRODUCT 4 - COFFEE BAG */
+
+            "coffee-bag": [
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "The colour is beautiful and the bag is very elegant.",
+                    name: "Priscilla"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "I love how spacious this bag is. It is perfect for my everyday outfits.",
+                    name: "Doreen"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐",
+                    text: "A lovely bag with a very nice design.",
+                    name: "Mavis"
+                }
+
+            ],
+
+
+            /* PRODUCT 5 - L.V */
+
+            "lv": [
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "This bag is so beautiful. I received many compliments when I used it.",
+                    name: "Sandra"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "Very fashionable and exactly what I was looking for.",
+                    name: "Belinda"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐",
+                    text: "The bag is beautiful and easy to match with different outfits.",
+                    name: "Michelle"
+                }
+
+            ],
+
+
+            /* PRODUCT 6 - ARI SLIDES */
+
+            "ari-slides": [
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "These slides are very comfortable and stylish.",
+                    name: "Efua"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "I can wear them all day without feeling uncomfortable.",
+                    name: "Yaa"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐",
+                    text: "Very cute slides and the quality is good.",
+                    name: "Maame"
+                }
+
+            ],
+
+
+            /* PRODUCT 7 - DIOR HEELS */
+
+            "dior-heels": [
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "These heels are elegant and perfect for special occasions.",
+                    name: "Janet"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "I love the design. They make my outfit look so classy.",
+                    name: "Esther"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐",
+                    text: "Beautiful heels and the size fits perfectly.",
+                    name: "Gloria"
+                }
+
+            ],
+
+
+            /* PRODUCT 8 - CHAN 2AB */
+
+            "chan-2ab": [
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "This bag is very elegant and looks even better in person.",
+                    name: "Angela"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "I really like the fashionable design of this bag.",
+                    name: "Rita"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐",
+                    text: "Good quality and very nice colour.",
+                    name: "Cynthia"
+                }
+
+            ],
+
+
+            /* PRODUCT 9 - GREEN LV */
+
+            "green-lv": [
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "The green colour is gorgeous. I absolutely love this set.",
+                    name: "Grace"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "Very stylish and different from the usual bags I see.",
+                    name: "Freda"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐",
+                    text: "Beautiful design and the slides are comfortable too.",
+                    name: "Ruth"
+                }
+
+            ],
+
+
+            /* PRODUCT 10 - RED BAG */
+
+            "red-bag": [
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "The red colour is so beautiful and eye-catching.",
+                    name: "Victoria"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "I love this bag. It is stylish and easy to carry.",
+                    name: "Comfort"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐",
+                    text: "A beautiful bag that goes well with my outfits.",
+                    name: "Florence"
+                }
+
+            ],
+
+
+            /* PRODUCT 11 - WHITE HEELS */
+
+            "white-heels": [
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "These white heels are gorgeous and very elegant.",
+                    name: "Rose"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "They fit perfectly and look beautiful when worn.",
+                    name: "Patricia"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐",
+                    text: "Very classy heels. I really like them.",
+                    name: "Juliet"
+                }
+
+            ],
+
+
+            /* PRODUCT 12 - PINK BAG */
+
+            "pink-bag": [
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "The pink colour is beautiful and the bag is very stylish.",
+                    name: "Christabel"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "This is now one of my favourite bags. I love it!",
+                    name: "Rebecca"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐",
+                    text: "Lovely bag with a beautiful feminine design.",
+                    name: "Emelia"
+                }
+
+            ],
+
+
+            /* PRODUCT 13 - BLACK HEELS */
+
+            "black-heels": [
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "These black heels are very elegant and easy to match with different outfits.",
+                    name: "Diana"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "I love how classy these heels look when I wear them.",
+                    name: "Sandy"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐",
+                    text: "The heels are beautiful and the size fits me well.",
+                    name: "Christy"
+                }
+
+            ],
+
+
+            /* PRODUCT 14 - BROWN BAG */
+
+            "brown-bag": [
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "This brown bag is beautiful and perfect for everyday use.",
+                    name: "Vanessa"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "I really like the colour and the size of this bag.",
+                    name: "Baaba"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐",
+                    text: "Very stylish bag and the quality is good.",
+                    name: "Nessa"
+                }
+
+            ],
+
+
+            /* PRODUCT 15 - GOLD HEELS */
+
+            "gold-heels": [
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "These gold heels are stunning. They made my outfit look amazing.",
+                    name: "Petra"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐⭐",
+                    text: "I wore these heels to an event and received so many compliments.",
+                    name: "Miara"
+                },
+
+                {
+                    stars: "⭐⭐⭐⭐",
+                    text: "Beautiful and elegant heels. I really love the gold colour.",
+                    name: "Tiokor"
+                }
+
+            ]
+
+        };
+
+
+        /* ================= DISPLAY REVIEWS ================= */
+
+        const reviewsContainer =
+            document.getElementById("reviewsContainer");
+
+
+        if (reviews[product]) {
+
+            reviews[product].forEach(function(review) {
+
+                const reviewDiv =
+                    document.createElement("div");
+
+                reviewDiv.className =
+                    "review";
+
+
+                reviewDiv.innerHTML = `
+
+                    <div class="stars">
+                        ${review.stars}
+                    </div>
+
+                    <p>
+                        "${review.text}"
+                    </p>
+
+                    <strong>
+                        — ${review.name}
+                    </strong>
+
+                `;
+
+
+                reviewsContainer.appendChild(reviewDiv);
+
+            });
+
+        } else {
+
+            reviewsContainer.innerHTML = `
+                <p>No reviews available for this product yet.</p>
+            `;
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+```
